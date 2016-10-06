@@ -6,6 +6,10 @@
     function appListController($scope, ActivityService) {
         $scope.activityDate = new Date();
 
+        $scope.openDatePicker = function() {
+            $scope.opened = true
+        };
+
         $scope.$watch('activityDate', function (newValStr) {
             var newValDate = new Date(newValStr);
             ActivityService.getActivitiesByDate(newValDate).then(function (result) {
@@ -34,5 +38,6 @@
                 });
             }
         }
+
     }
 })();

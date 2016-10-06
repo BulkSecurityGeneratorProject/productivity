@@ -1,9 +1,13 @@
 <div>
     <div class="row">
-        <div class="col-md-3" style="padding-bottom: 50px;">
-            <datepicker date-format="MMMM d, yyyy">
-                <input ng-model="activityDate" type="text" placeholder="Choose a date"/>
-            </datepicker>
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="MMMM d, yyyy"
+                       ng-model="activityDate" is-open="opened" />
+                <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+            </p>
         </div>
     </div>
 
