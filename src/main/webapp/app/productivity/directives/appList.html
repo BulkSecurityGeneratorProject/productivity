@@ -1,0 +1,21 @@
+<div>
+    <div class="row">
+        <div class="col-md-3" style="padding-bottom: 50px;">
+            <datepicker date-format="MMMM d, yyyy">
+                <input ng-model="activityDate" type="text" placeholder="Choose a date"/>
+            </datepicker>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 list-group">
+            <div ng-repeat="activityExecution in activities"
+               class="list-group-item" ng-class="{'active': selectedActivityIndex == $index}">
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-click="createActivityExecution(this)" ng-checked="activityExecution.executionDate">
+                    {{activityExecution.activity.name}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
