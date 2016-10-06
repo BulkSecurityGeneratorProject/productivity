@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .controller('UserManagementDialogController',UserManagementDialogController);
 
     UserManagementDialogController.$inject = ['$stateParams', '$uibModalInstance', 'entity', 'User', 'JhiLanguageService'];

@@ -1,5 +1,5 @@
 (function() {
-    angular.module("appApp").directive("appList", appList);
+    angular.module("productivityApp").directive("appList", appList);
 
     function appList() {
         var directive = {

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .controller('ActivitiesController', ActivitiesController);
 
     ActivitiesController.$inject = ['$scope'];

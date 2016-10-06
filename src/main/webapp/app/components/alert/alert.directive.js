@@ -11,7 +11,7 @@
     };
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .component('jhiAlert', jhiAlert);
 
     jhiAlertController.$inject = ['$scope', 'AlertService'];

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .factory('PaginationUtil', PaginationUtil);
 
     function PaginationUtil () {

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .directive('minbytes', minbytes);
 
     function minbytes () {

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .directive('jhSocial', jhSocial);
 
     jhSocial.$inject = ['$translatePartialLoader', '$translate', '$filter', 'SocialService'];
@@ -22,10 +22,10 @@
         /* private helper methods */
 
         function linkFunc(scope) {
-            
+
             $translatePartialLoader.addPart('social');
             $translate.refresh();
-            
+
             scope.label = $filter('capitalize')(scope.provider);
             scope.providerSetting = SocialService.getProviderSetting(scope.provider);
             scope.providerURL = SocialService.getProviderURL(scope.provider);

@@ -2,9 +2,9 @@
     'use strict';
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .filter('characters', characters);
-        
+
     function characters () {
         return charactersFilter;
 

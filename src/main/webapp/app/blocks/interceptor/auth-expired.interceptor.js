@@ -2,10 +2,10 @@
     'use strict';
 
     angular
-        .module('appApp')
+        .module('productivityApp')
         .factory('authExpiredInterceptor', authExpiredInterceptor);
 
-    
+
     authExpiredInterceptor.$inject = ['$rootScope', '$q', '$injector', '$document'];
 
     function authExpiredInterceptor($rootScope, $q, $injector, $document) {

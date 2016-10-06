@@ -1,5 +1,5 @@
 (function () {
-    angular.module("appApp").factory("ActivityService", activityService);
+    angular.module("productivityApp").factory("ActivityService", activityService);
 
     activityService.$inject = ['$http'];
 

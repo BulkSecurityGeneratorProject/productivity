@@ -13,28 +13,28 @@ public class HeaderUtil {
 
     public static HttpHeaders createAlert(String message, String param) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-appApp-alert", message);
-        headers.add("X-appApp-params", param);
+        headers.add("X-productivityApp-alert", message);
+        headers.add("X-productivityApp-params", param);
         return headers;
     }
 
     public static HttpHeaders createEntityCreationAlert(String entityName, String param) {
-        return createAlert("appApp." + entityName + ".created", param);
+        return createAlert("productivityApp." + entityName + ".created", param);
     }
 
     public static HttpHeaders createEntityUpdateAlert(String entityName, String param) {
-        return createAlert("appApp." + entityName + ".updated", param);
+        return createAlert("productivityApp." + entityName + ".updated", param);
     }
 
     public static HttpHeaders createEntityDeletionAlert(String entityName, String param) {
-        return createAlert("appApp." + entityName + ".deleted", param);
+        return createAlert("productivityApp." + entityName + ".deleted", param);
     }
 
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         log.error("Entity creation failed, {}", defaultMessage);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-appApp-error", "error." + errorKey);
-        headers.add("X-appApp-params", entityName);
+        headers.add("X-productivityApp-error", "error." + errorKey);
+        headers.add("X-productivityApp-params", entityName);
         return headers;
     }
 }

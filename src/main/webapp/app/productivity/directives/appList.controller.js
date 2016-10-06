@@ -1,5 +1,5 @@
 (function () {
-    angular.module("appApp").controller("appListController", appListController);
+    angular.module("productivityApp").controller("appListController", appListController);
 
     appListController.$inject = ['$scope', 'ActivityService'];
 
