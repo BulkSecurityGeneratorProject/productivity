@@ -1,24 +1,28 @@
 <div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
             <p class="input-group">
-                <input type="text" class="form-control" uib-datepicker-popup="MMMM d, yyyy"
-                       ng-model="activityDate" is-open="opened" />
+                <input type="text" class="form-control" uib-datepicker-popup="MMMM d, yyyy" ng-model="activityDate"
+                       is-open="opened"/>
                 <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+            <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i
+                class="glyphicon glyphicon-calendar"></i></button>
           </span>
             </p>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-2 list-group">
-            <div ng-repeat="activityExecution in activities"
-               class="list-group-item" ng-class="{'active': selectedActivityIndex == $index}">
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-click="createActivityExecution(this)" ng-checked="activityExecution.executionDate">
-                    {{activityExecution.activity.name}}
-                </label>
+        <div class="col-md-2">
+            <div class="list-group">
+                <div ng-repeat="activityExecution in activities"
+                     class="list-group-item" ng-class="{'active': selectedActivityIndex == $index}">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" ng-click="createActivityExecution(this)"
+                               ng-checked="activityExecution.executionDate">
+                        {{activityExecution.activity.name}}
+                    </label>
+                </div>
             </div>
         </div>
     </div>
