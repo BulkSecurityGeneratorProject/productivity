@@ -57,4 +57,8 @@ public class ActivityExecutionService {
         List<ActivityExecution> activityExecutions = repository.findByExecutionDateBetween(start, end);
         return activityExecutions;
     }
+
+    public void removeActivityExecution(long id) {
+        repository.delete(id);
+    }
 }

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -15,12 +15,18 @@
                 authorities: []
             },
             views: {
-            'content@': {
-                templateUrl: 'app/productivity/activities/activities.html',
-                controller: 'ActivitiesController',
-                controllerAs: 'vm'
+                'content@': {
+                    templateUrl: 'app/productivity/activities/activities.html',
+                    controller: 'ActivitiesController',
+                    controllerAs: 'vm'
+                }
+            },
+            resolve: {
+                mainTranslatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('home');
+                    return $translate.refresh();
+                }]
             }
-        }
         });
     }
 })();

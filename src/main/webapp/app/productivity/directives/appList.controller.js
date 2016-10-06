@@ -21,12 +21,18 @@
         $scope.createActivityExecution = function (elem) {
             var activityExecution = elem.activityExecution;
 
-            ActivityService.createActivityExecution({
-                activityId: activityExecution.activity.id,
-                executionDate: new Date()
-            }).then(function (result) {
-                // TODO handle error
-            });
+            if (activityExecution.executionDate) {
+                ActivityService.removeActivityExecution(activityExecution.id).then(function (result) {
+                    // TODO handle error
+                });
+            } else {
+                ActivityService.createActivityExecution({
+                    activityId: activityExecution.activity.id,
+                    executionDate: new Date()
+                }).then(function (result) {
+                    // TODO handle error
+                });
+            }
         }
     }
 })();

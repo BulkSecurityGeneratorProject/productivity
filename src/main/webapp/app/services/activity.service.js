@@ -16,6 +16,12 @@
                 return $http.post("api/activity-execution", activityExecution).then(function (result) {
                     return result;
                 });
+            },
+
+            removeActivityExecution: function (activityExecutionId) {
+                return $http.delete("api/activity-execution/id/" + activityExecutionId).then(function (result) {
+                    return result;
+                });
             }
         };
     }

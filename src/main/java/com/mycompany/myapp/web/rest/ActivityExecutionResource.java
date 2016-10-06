@@ -37,4 +37,9 @@ public class ActivityExecutionResource {
                                                @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate end) {
         return activityExecutionService.getByDateRange(start, end);
     }
+
+    @RequestMapping(value = "/id/{id}", method = RequestMethod.DELETE)
+    public void removeActivityExecution(@PathVariable Long id) {
+        activityExecutionService.removeActivityExecution(id);
+    }
 }
