@@ -7,7 +7,8 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "productivity": {
                 "main": "Productivity",
-              "activities": "Activities"
+              "activities": "Activities",
+                "graphics": "Graphics"
             },
             "entities": {
                 "main": "Entities",
