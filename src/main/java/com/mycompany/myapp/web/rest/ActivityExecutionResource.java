@@ -31,7 +31,7 @@ public class ActivityExecutionResource {
         activityExecutionService.create(activityExecutionDTO);
     }
 
-    @RequestMapping(value = "{start}:{end}",
+    @RequestMapping(value = "date-range/{start}:{end}",
         method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<ActivityExecution> findByRange(@PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start,
                                                @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate end) {

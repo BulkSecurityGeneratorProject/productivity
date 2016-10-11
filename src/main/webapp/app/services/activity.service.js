@@ -12,6 +12,14 @@
                 });
             },
 
+            getActivitiesByDateRange: function (activityDateStart, activityDateEnd) {
+                var dateStart = activityDateStart.toISOString().slice(0, 10);
+                var dateEnd = activityDateEnd.toISOString().slice(0, 10);
+                return $http.get("api/activity-execution/date-range/" + dateStart + ":" + dateEnd).then(function (result) {
+                    return result;
+                });
+            },
+
             createActivityExecution: function (activityExecution) {
                 return $http.post("api/activity-execution", activityExecution).then(function (result) {
                     return result;
